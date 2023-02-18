@@ -3,7 +3,6 @@ import React, { createContext, useState } from "react";
 export const RestaurantsContext = createContext();
 
 export const RestaurantsContextProvider = ({ children }) => {
-
   const [restaurants, setRestaurants] = useState([]);
   const [selectedRestaurant, setSelectedRestaurant] = useState("");
 
@@ -15,7 +14,6 @@ export const RestaurantsContextProvider = ({ children }) => {
     let data = restaurants.filter((restaurant) => restaurant.id !== id);
     setRestaurants(data);
   };
-
   return (
     <RestaurantsContext.Provider
       value={{
@@ -30,10 +28,4 @@ export const RestaurantsContextProvider = ({ children }) => {
       {children}
     </RestaurantsContext.Provider>
   );
-
 };
-
-
-
-
-

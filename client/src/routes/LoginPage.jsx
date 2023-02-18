@@ -1,33 +1,45 @@
-import React from "react"
-import AddRestaurant from "../components/AddRestaurant"
-import Header from "../components/Header"
-import RestaurantList from "../components/RestaurantList"
-//import LoginPage from "../routes/LoginPage.jsx";
+// import React from "react";
+import React from "react";
+import Header2 from "../components/Header2"
+import Footer from "../components/Footer"
+//import Body2 from "../components/Body2"
 import LoginForm from "../components/LoginForm";
 import SideBar from "../components/SideBar";
 
-import Header2 from "../components/Header2"
-import Footer from "../components/Footer"
+// import { useState } from "react";
+// import { Data } from "./Data";
+// import PieChart from "./Backup/PieChart";
+// import 'chart.js/auto'
 
 
+// body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+// body {font-size:16px;}
+// .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+// .w3-half img:hover{opacity:1}
 
 
-const mystyle = {
-  color: "white",
-  backgroundColor: "DodgerBlue",
-  padding: "10px",
-  fontFamily: "Arial",
-  body: {fontFamily: "Poppins", font:"sansSerif",fontSize:16,height:100},
-  html: {height:100},
-  w3HalfImg:{marginBottom:-6,marginTop:16,opacity:0.8,cursor:"pointer",hover:{opacity:1}},
+  
+  const mystyle = {
+    color: "white",
+    backgroundColor: "DodgerBlue",
+    padding: "10px",
+    fontFamily: "Arial",
+    body: {fontFamily: "Poppins", font:"sansSerif",fontSize:16,height:100},
+    html: {height:100},
+    w3HalfImg:{marginBottom:-6,marginTop:16,opacity:0.8,cursor:"pointer",hover:{opacity:1}},
 
-};
+  };
 
-const Home = (props) => {
-  return (
+
+function LoginPage() {
+
+  
+
+    return(
+
 <div>
 
-<Header/>
+<Header2/>
 {/* <Body2/> */}
 
 <div>
@@ -72,7 +84,12 @@ const Home = (props) => {
 </div>
 <Footer/>
 </div>
-  )
-};
 
-export default Home;
+
+        
+    );
+
+}
+
+export default LoginPage;
+

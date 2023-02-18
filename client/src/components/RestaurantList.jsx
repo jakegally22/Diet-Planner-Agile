@@ -4,7 +4,7 @@ import RestaurantFinder from "../apis/RestaurantFinder";
 import { RestaurantsContext } from "../context/RestaurantsContext";
 import { Spinner } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-//import StarRating from "./StarRating";
+import StarRating from "./StarRating";
 
 const RestaurantList = (props) => {
   const history = useHistory();
@@ -22,18 +22,18 @@ const RestaurantList = (props) => {
     history.push(`/restaurants/${id}`);
   };
 
-  // const renderRating = (rating, count) => {
-  //   if (!count) {
-  //     return <span className="text-warning">0 review</span>;
-  //   } else {
-  //     return (
-  //       <>
-  //         <StarRating rating={rating} />
-  //         <span className="text-warning ml-1">({count})</span>
-  //       </>
-  //     );
-  //   }
-  // };
+  const renderRating = (rating, count) => {
+    if (!count) {
+      return <span className="text-warning">0 review</span>;
+    } else {
+      return (
+        <>
+          <StarRating rating={rating} />
+          <span className="text-warning ml-1">({count})</span>
+        </>
+      );
+    }
+  };
 
   const handleDelete = (e, id) => {
     e.stopPropagation();
@@ -75,25 +75,21 @@ const RestaurantList = (props) => {
         <thead>
           <tr className="bg-primary">
             <th scope="col">Restaurant</th>
-            <th scope="col">calories</th>
-            {/* <th scope="col">Price Range</th> */}
-            {/* <th scope="col">Ratings</th> */}
+            <th scope="col">Location</th>
+            <th scope="col">Price Range</th>
+            <th scope="col">Ratings</th>
             <th scope="col">Edit</th>
             <th scope="col">Delete</th>
           </tr>
         </thead>
         <tbody>
           {restaurants.map(
-            // ({ id, name, calories, price_range, count, average_rating }) => (
-              // ({ id, name, price_range, count, average_rating }) => (
-
-              // ({ id, name, count, average_rating }) => (
-              ({ id, name,calories}) => (
+            ({ id, name, location, price_range, count, average_rating }) => (
               <tr onClick={() => handleRestaurantSelect(id)} key={id}>
                 <th scope="row">{name}</th>
-                <td>{calories}</td>
-                {/* <td>{"$".repeat(price_range)}</td> */}
-                {/* <td>{renderRating(average_rating, count)}</td> */}
+                <td>{location}</td>
+                <td>{"$".repeat(price_range)}</td>
+                <td>{renderRating(average_rating, count)}</td>
                 <td>
                   <button
                     onClick={(e) => handleUpdate(e, id)}
