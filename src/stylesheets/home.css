@@ -1,0 +1,48 @@
+button{
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+}
+
+.home{
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.home-top{
+  background-color: var(--primary);
+  color: var(--primary-letter);
+  padding: 15px;
+  border-radius: 0 0 5% 5%;
+}
+.home-top button{
+  color: var(--primary-letter);
+  border: 1px solid var(--primary-letter);
+}
+
+.datechanger{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 70px;
+}
+
+.home-mealitems{
+  padding: 50px 60px;
+}
+
+.home-settings{
+  position: absolute;
+  top: 0;
+  right: 50px;
+}
+.home-settings button{
+  font-size: 80px;
+  color: white;
+  transition: 0.2s all linear;
+}
+
+.home-settings button:focus{
+  border: none;
+  outline: none;
+}

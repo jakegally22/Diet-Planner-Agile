@@ -1,0 +1,43 @@
+.settings-top {
+  background-color: var(--primary);
+  border-radius: 0 0 2rem 2rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.settings-top h1 {
+  font-size: 5rem;
+  color: white;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 0;
+}
+
+.settings-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.settings-inputDiv {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  align-items: center;
+}
+
+.settings-inputDiv h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.settings-inputDiv input {
+  font-size: 1.5rem;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  width: 20rem;
+  margin-left: 2rem;
+  padding: 0.5rem;
+}

@@ -1,0 +1,30 @@
+.infoitem {
+  padding: 10px 0;
+  color: var(--primary-letter);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.infoitem-top {
+  display: flex;
+  flex-direction: row;
+}
+
+.infoitem-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--primary-letter);
+}
+.infoitem-data h2 {
+  font-size: 40px;
+  margin: 20px 0;
+}
+.infoitem-data h3 {
+  font-size: 25px;
+  margin: 5px 0;
+}
+
+.infoitem-button {
+  padding: 10px 20px;
+}

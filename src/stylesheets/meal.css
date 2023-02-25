@@ -1,0 +1,40 @@
+.meal{
+  background-color: var(--light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.meal-top{
+  background-color: var(--primary);
+  color: white;
+  padding: 20px 20px 20px 20px;
+  border-radius: 0 0 5% 5%;
+  width: 100%;
+}
+
+.meal-progress{
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.meal-top h2{
+  font-size: 35px;
+}
+
+.meal-search-link{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+}
+
+
+.meal-infolist, .meal-foodlist{
+  width: 100%;
+}
+.meal-foodlist{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
