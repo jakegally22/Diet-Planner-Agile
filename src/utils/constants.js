@@ -76,15 +76,6 @@ const foodFrame = {
   "nameClean": "name clean",
   "amount": 1,
   "unit": "g",
-  "possibleUnits": [
-    "piece",
-    "slice",
-    "fruit",
-    "g",
-    "oz",
-    "cup",
-    "serving"
-  ],
   "image": "imgFile",
   "meta": [],
   "nutrition": {

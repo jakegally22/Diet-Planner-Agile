@@ -5,7 +5,7 @@ import {formatDate} from '../utils/helpers';
 import ProgressCircle from '../components/ProgressCircle';
 import firebase from '../firebase';
 import {dataFrame} from '../utils/constants';
-import {BackArrowDiv, PrimaryButton} from '../stylesheets/styledComponents';
+import {PrimaryButton} from '../stylesheets/common';
 import MealFoodItem from '../components/MealFoodItem';
 
 const Meal = (props) => {
@@ -67,6 +67,9 @@ const Meal = (props) => {
     return (
         <div className="meal">
             <div className="meal-top">
+                <Link to="/diet-tracker">
+                    <h2>Back</h2>
+                </Link>
                 <div className="meal-progress" style={progressColor}>
                     <ProgressCircle progress={progress} circleSize="200" calories={data.totalCal}
                                     message={"calories eaten"}/>
@@ -86,11 +89,7 @@ const Meal = (props) => {
                 }
             </div>
 
-            <BackArrowDiv>
-                <Link to="/diet-tracker">
-                    <h2>Back</h2>
-                </Link>
-            </BackArrowDiv>
+
         </div>
     );
 }

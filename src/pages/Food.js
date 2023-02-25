@@ -3,7 +3,7 @@ import '../stylesheets/food.css';
 import {Link, useRouteMatch} from "react-router-dom";
 import {foodFrame, dataFrame, SPOONACULAR_API_KEY} from '../utils/constants';
 import {formatDate, findNutrient, addFood} from '../utils/helpers';
-import {Dropdown, DropdownElement, MessageDiv, PrimaryButton, BackArrowDiv} from '../stylesheets/styledComponents';
+import {HintDiv, PrimaryButton} from '../stylesheets/common';
 import ProgressCircle from '../components/ProgressCircle';
 import firebase from '../firebase';
 
@@ -100,21 +100,10 @@ const Food = (props) => {
 
             <div className="food-section">
                 <div className="food-inputs">
-                    <MessageDiv>
-                        <h2 className="component-message">Press Enter to Submit</h2>
+                    <HintDiv>
+                        <h2 className="component-message">Input in grams, press Enter to Submit</h2>
                         <input type="number" min="1" id="food-amount"/>
-                    </MessageDiv>
-                    <Dropdown fontSize="55px">
-                        <button className="dropdown-btn">{unit} ⏷</button>
-                        <div className="dropdown-content">
-                            {
-                                result.possibleUnits.map((unit) => {
-                                    return <DropdownElement key={unit}
-                                                            onClick={() => setUnit(unit)}> {unit}</DropdownElement>
-                                })
-                            }
-                        </div>
-                    </Dropdown>
+                    </HintDiv>
                 </div>
                 <div>
                     <h2>{findNutrient(result, "Calories").amount} cals</h2>
@@ -155,11 +144,9 @@ const Food = (props) => {
                 </Link>
             </div>
 
-            <BackArrowDiv>
-                <Link to={`/meal/${meal}/search`}>
-                    <h2>Back</h2>
-                </Link>
-            </BackArrowDiv>
+            <Link to={`/meal/${meal}/search`}>
+                <h2>Back</h2>
+            </Link>
         </div>
     );
 }
