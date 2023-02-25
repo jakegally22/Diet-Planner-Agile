@@ -36,8 +36,6 @@ function resultsReducer (state, action) {
   }
 }
 
-// CHANGE CONFIGURATION
-
 function configReducer (state, action) {
   switch (action.type) {
     case 'update':

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {dataFrame} from '../utils/constants';
+import {statsModel} from '../utils/constants';
 import firebase from '../firebase';
 import {formatDate} from '../utils/helpers';
 import InfoList from '../components/InfoList.js';
@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 
 const InfoSheet = (props) => {
     const [goal, setGoal] = useState(1400);
-    const [data, setData] = useState(dataFrame);
+    const [data, setData] = useState(statsModel);
 
     useEffect(() => {
         setGoal(props.config.goalCal);
@@ -16,7 +16,6 @@ const InfoSheet = (props) => {
 
 
     useEffect(() => {
-        // NOTE: instead of useEffect maybe listen for firestore at doc changes
         let abortController = new AbortController();
         let aborted = abortController.signal.aborted;
         let firestore = firebase.firestore();

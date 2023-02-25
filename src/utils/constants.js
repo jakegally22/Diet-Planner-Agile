@@ -1,4 +1,4 @@
-const nutritionFrame = [
+const nutritionModel = [
     {
         "name": "Calories",
         "amount": 0,
@@ -26,7 +26,7 @@ const nutritionFrame = [
 ]
 
 
-const dataFrame = {
+const statsModel = {
   totalCal : 0,
   totalFat : 0,
   totalProtein : 0,
@@ -39,7 +39,7 @@ const dataFrame = {
       totalProtein : 0,
       totalCarb : 0,
       foods: [],
-      nutrients: nutritionFrame,
+      nutrients: nutritionModel,
     },
     lunch: {
       totalCal : 0,
@@ -47,7 +47,7 @@ const dataFrame = {
       totalProtein : 0,
       totalCarb : 0,
       foods: [],
-      nutrients: nutritionFrame,
+      nutrients: nutritionModel,
     },
     dinner: {
       totalCal : 0,
@@ -55,7 +55,7 @@ const dataFrame = {
       totalProtein : 0,
       totalCarb : 0,
       foods: [],
-      nutrients: nutritionFrame,
+      nutrients: nutritionModel,
     },
     snacks: {
       totalCal : 0,
@@ -63,14 +63,14 @@ const dataFrame = {
       totalProtein : 0,
       totalCarb : 0,
       foods: [],
-      nutrients: nutritionFrame,
+      nutrients: nutritionModel,
     },
   },
-  nutrients: nutritionFrame,
+  nutrients: nutritionModel,
 };
 
 
-const foodFrame = {
+const foodModel = {
   "id": 1111,
   "name": "name",
   "nameClean": "name clean",
@@ -79,7 +79,7 @@ const foodFrame = {
   "image": "imgFile",
   "meta": [],
   "nutrition": {
-      "nutrients": nutritionFrame,
+      "nutrients": nutritionModel,
       "caloricBreakdown": {
           "percentProtein": 30,
           "percentFat": 20,
@@ -99,7 +99,5 @@ const defaultSettings = {
     goalCarb: 200,
 }
 
-
-// TODO: make constant for user config
 const SPOONACULAR_API_KEY="fe8fb94beaa8418e91b22e1aa962388c"
-export {dataFrame, foodFrame, defaultSettings, nutritionFrame, SPOONACULAR_API_KEY};
+export {statsModel, foodModel, defaultSettings, nutritionModel, SPOONACULAR_API_KEY};

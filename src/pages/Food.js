@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import '../stylesheets/food.css';
 import {Link, useRouteMatch} from "react-router-dom";
-import {foodFrame, dataFrame, SPOONACULAR_API_KEY} from '../utils/constants';
+import {foodModel, statsModel, SPOONACULAR_API_KEY} from '../utils/constants';
 import {formatDate, findNutrient, addFood} from '../utils/helpers';
 import {HintDiv, PrimaryButton} from '../stylesheets/common';
 import ProgressCircle from '../components/ProgressCircle';
@@ -11,8 +11,8 @@ const Food = (props) => {
     const link = useRouteMatch('/meal/:id/search/:id').url.split('/');
     const foodId = link[link.length - 1];
     let meal = link[link.length - 3];
-    const [result, setResult] = useState(foodFrame);
-    const [data, setData] = useState(dataFrame);
+    const [result, setResult] = useState(foodModel);
+    const [data, setData] = useState(statsModel);
     const [amount, setAmount] = useState(1);
     const [unit, setUnit] = useState("g");
     const [macrosPer, setMacrosPer] = useState([["protein", 30], ["fat", 20], ["carbs", 50]]);

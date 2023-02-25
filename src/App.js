@@ -40,7 +40,7 @@ function App() {
                 }
               });
             } else {
-              usersRef.set(defaultSettings); // Create Doc with Default
+              usersRef.set(defaultSettings);
             }
       });
     }

@@ -34,10 +34,10 @@ const Settings = (props) => {
             goalProtein: Number(inputProtein.value),
             goalCarb: Number(inputCarbs.value),
         }
-        // update firestore (set it)
+
         var db = firebase.firestore();
         db.collection('users').doc(firebase.auth().currentUser.uid).collection('settings').doc('config').update(newConfig)
-        // dispatch config
+
         props.dispatchConfig({type: 'update', payload: newConfig});
     }
 

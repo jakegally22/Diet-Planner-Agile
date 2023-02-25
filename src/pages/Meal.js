@@ -4,7 +4,7 @@ import {Link, useRouteMatch} from "react-router-dom";
 import {formatDate} from '../utils/helpers';
 import ProgressCircle from '../components/ProgressCircle';
 import firebase from '../firebase';
-import {dataFrame} from '../utils/constants';
+import {statsModel} from '../utils/constants';
 import {PrimaryButton} from '../stylesheets/common';
 import MealFoodItem from '../components/MealFoodItem';
 
@@ -12,11 +12,11 @@ const Meal = (props) => {
     let meal = useRouteMatch('/meal/:id').url.split('/');
     meal = meal[meal.length - 1];
     const goalCal = Math.round((props.config.goalCal) / 3);
-    const [data, setData] = useState(dataFrame.meals[meal]);
+    const [data, setData] = useState(statsModel.meals[meal]);
     const [progressColor, setProgressColor] = useState({color: "white"});
     const [progress, setProgress] = useState(0);
     const [isSigned, setIsSigned] = useState(!!firebase.auth().currentUser);
-    const [allData, setAllData] = useState(dataFrame);
+    const [allData, setAllData] = useState(statsModel);
 
     useEffect(() => {
         let abortController = new AbortController();

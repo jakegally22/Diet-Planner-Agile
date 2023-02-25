@@ -6,14 +6,14 @@ import SignIn from './SignIn'
 import '../stylesheets/home.css';
 import firebase from '../firebase';
 import {formatDate} from '../utils/helpers';
-import {dataFrame} from '../utils/constants';
+import {statsModel} from '../utils/constants';
 import {Link} from "react-router-dom";
 
 const Home = (props) => {
     const meals = ["breakfast", "lunch", "dinner", "snacks"];
-    const [date, setDate] = useState(formatDate(new Date())); // xx-xx-xx
+    const [date, setDate] = useState(formatDate(new Date()));
     const [isSigned, setIsSigned] = useState(!!firebase.auth().currentUser);
-    const [data, setData] = useState(dataFrame); // FIX: also update on any updates to Doc
+    const [data, setData] = useState(statsModel);
 
     useEffect(() => {
         let abortController = new AbortController();
@@ -50,10 +50,10 @@ const Home = (props) => {
                             }
                         });
                     } else {
-                        usersRef.set(dataFrame); // Created Doc
+                        usersRef.set(statsModel);
                         aborted = abortController.signal.aborted;
                         if (aborted === false) {
-                            setData(dataFrame);
+                            setData(statsModel);
                         }
                     }
                 });
