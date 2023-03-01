@@ -1,0 +1,22 @@
+{
+  "name": "myapp-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && cd ../frontend && npm install",
+    "build:ui": "echo 'Building UI' && cd ../frontend && npm run build && cp -r build ../backend/build",
+    "start": "npm run build:ui && node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
