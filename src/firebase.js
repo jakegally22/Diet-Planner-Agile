@@ -2,6 +2,8 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
 
+// Not meant to be distributed besides for the submission of this
+// project.
 const firebaseConfig = {
   apiKey: "AIzaSyC4X9gckO36pymk-bWmlDj4ddk6gwKPmHo",
   authDomain: "diet-tracker-eefec.firebaseapp.com",

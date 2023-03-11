@@ -99,5 +99,7 @@ const defaultSettings = {
     goalCarb: 200,
 }
 
+// Not meant to be distributed besides for the submission of this
+// project.
 const SPOONACULAR_API_KEY="fe8fb94beaa8418e91b22e1aa962388c"
 export {statsModel, foodModel, defaultSettings, nutritionModel, SPOONACULAR_API_KEY};
