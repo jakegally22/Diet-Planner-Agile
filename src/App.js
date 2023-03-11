@@ -53,9 +53,9 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path='/diet-tracker/' component={() => <Home date={stateDate.date} dispatchDate={dispatchDate} config={stateConfig.config} dispatchConfig={dispatchConfig}/>}/>
+          <Route exact path='/' component={() => <Home date={stateDate.date} dispatchDate={dispatchDate} config={stateConfig.config} dispatchConfig={dispatchConfig}/>}/>
           <Route exact path='/meal/:id' component={() => <Meal date={stateDate.date} dispatchDate={dispatchDate} config={stateConfig.config}/>}/>
-          <Route exact path='/diet-tracker/signin' component={() => <SignIn/>}/>
+          <Route exact path='/signin' component={() => <SignIn/>}/>
           <Route exact path='/meal/:id/search' component={() => <Search date={stateDate.date} results={stateResults.results} dispatchResults={dispatchResults}/>}/>
           <Route exact path='/meal/:id/search/:id' component={() => <Food date={stateDate.date}/>}/>
           <Route exact path='/infosheet' component={() => <InfoSheet date={stateDate.date} config={stateConfig.config} />}/>

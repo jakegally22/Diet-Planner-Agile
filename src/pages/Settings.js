@@ -70,7 +70,7 @@ const Settings = (props) => {
                 <PrimaryButton width="20%" onClick={submit}>Submit</PrimaryButton>
             </div>
 
-            <Link to="/diet-tracker">
+            <Link to="/">
                 <h2>Back</h2>
             </Link>
         </div>

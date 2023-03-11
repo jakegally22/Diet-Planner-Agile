@@ -67,7 +67,7 @@ const Meal = (props) => {
     return (
         <div className="meal">
             <div className="meal-top">
-                <Link to="/diet-tracker">
+                <Link to="/">
                     <h2>Back</h2>
                 </Link>
                 <div className="meal-progress" style={progressColor}>

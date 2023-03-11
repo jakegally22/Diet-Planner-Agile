@@ -38,7 +38,7 @@ const InfoSheet = (props) => {
     return (
         <div className="infosheet">
             <div className="infosheet-back-div">
-                <Link to="/diet-tracker">
+                <Link to="/">
                     <h2>Back</h2>
                 </Link>
             </div>
